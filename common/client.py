@@ -43,7 +43,7 @@ class CommonClient(URLCenter):
         url = url_format.replace("#", topic)
         response = DoneResponse()
         self._http_caller.do_pb_request(url, request, response, *opts)
-        log.debug("[ByteplusSDK][Done] rsp:\n%s", response)
+        log.debug("[VolcengineSDK][Done] rsp:\n%s", response)
         return response
 
     @staticmethod
@@ -58,12 +58,12 @@ class CommonClient(URLCenter):
         url: str = self._common_url.get_operation_url
         response: OperationResponse = OperationResponse()
         self._http_caller.do_pb_request(url, request, response, *opts)
-        log.debug("[ByteplusSDK][GetOperations] rsp:\n%s", response)
+        log.debug("[VolcengineSDK][GetOperations] rsp:\n%s", response)
         return response
 
     def list_operations(self, request: ListOperationsRequest, *opts: Option) -> ListOperationsResponse:
         url: str = self._common_url.list_operations_url
         response: ListOperationsResponse = ListOperationsResponse()
         self._http_caller.do_pb_request(url, request, response, *opts)
-        log.debug("[ByteplusSDK][ListOperations] rsp:\n%s", response)
+        log.debug("[VolcengineSDK][ListOperations] rsp:\n%s", response)
         return response
