@@ -1,4 +1,4 @@
-__title__ = 'volcengine'
+__title__ = 'volcengine_sdk_rec'
 __description__ = 'SDK for volcengine'
 __url__ = 'https://github.com/volcengine/volcengine-sdk-python-rec'
 __version__ = '1.0.0'

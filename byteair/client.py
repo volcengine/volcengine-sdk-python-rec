@@ -36,7 +36,7 @@ class Client(CommonClient):
         url: str = url_format.replace("#", topic)
         response: WriteResponse = WriteResponse()
         self._http_caller.do_json_request(url, data_list, response, *opts)
-        log.debug("[ByteplusSDK][WriteData] rsp:\n %s", response)
+        log.debug("[VolcengineSDK][WriteData] rsp:\n %s", response)
         return response
 
     def predict(self, request: PredictRequest, *opts: CoreOption) -> PredictResponse:
@@ -48,7 +48,7 @@ class Client(CommonClient):
         url: str = url_format.replace("#", scene)
         response: PredictResponse = PredictResponse()
         self._http_caller.do_pb_request_with_opts_object(url, request, response, options)
-        log.debug("[ByteplusSDK][Predict] rsp:\n%s", response)
+        log.debug("[VolcengineSDK][Predict] rsp:\n%s", response)
         return response
 
     def callback(self, request: CallbackRequest, *opts: CoreOption) -> CallbackResponse:
@@ -59,7 +59,7 @@ class Client(CommonClient):
         request.scene = options.scene
         response: CallbackResponse = CallbackResponse()
         self._http_caller.do_pb_request_with_opts_object(url, request, response, options)
-        log.debug("[ByteplusSDK][Callback] rsp:\n%s", response)
+        log.debug("[VolcengineSDK][Callback] rsp:\n%s", response)
         return response
 
 

@@ -1,10 +1,6 @@
 syntax = "proto3";
 package metric;
 
-option go_package = "github.com/byteplus-sdk/sdk-go/core/metrics";
-option java_package = "byteplus.sdk.core.metrics";
-
-
 message Metric {
   string metric = 1;
   uint64 timestamp = 2;
