@@ -9,7 +9,7 @@ import requests
 import time
 import logging
 import sys
-from byteplus.core.exception import NetException, BizException
+from core.exception import NetException, BizException
 
 log = logging.getLogger(__name__)
 
@@ -202,11 +202,11 @@ def _send_metrics(metrics_requests: list, url: str):
         _send(metric_message, url)
         if _enable_print_log():
             log.debug("[VolcengineSDK][Metrics] send metrics success, url:{}, metrics_requests:{}".format(url,
-                                                                                                        metrics_requests))
+                                                                                                          metrics_requests))
     except BaseException as e:
         log.error(
             "[VolcengineSDK][Metrics] send metrics exception, msg:{}, url:{}, metricsRequests:{}".format(str(e), url,
-                                                                                                       metrics_requests))
+                                                                                                         metrics_requests))
 
 
 def _build_stat_metrics(sample: SampleSnapshot, name: str, tag_kvs: map):
