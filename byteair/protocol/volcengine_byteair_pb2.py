@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import volcengine_common_pb2 as volcengine__common__pb2
+import common.protocol.volcengine_common_pb2 as volcengine__common__pb2
 from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 
 
