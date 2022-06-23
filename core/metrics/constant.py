@@ -1,7 +1,8 @@
 from enum import Enum, unique
 
-DEFAULT_METRICS_DOMAIN = "bot.snssdk.com"
-DEFAULT_METRICS_PREFIX = "byteplus.rec.sdk"
+# TODO 动态根据region选择默认metrics_domain
+DEFAULT_METRICS_DOMAIN = "byteair-api-cn1.snssdk.com"
+DEFAULT_METRICS_PREFIX = "volcengine.rec.sdk"
 DEFAULT_HTTP_SCHEMA = "https"
 COUNTER_URL_FORMAT = "{}://{}/api/counter"
 OTHER_URL_FORMAT = "{}://{}/api/put"
