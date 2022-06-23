@@ -2,15 +2,9 @@ MAX_WRITE_ITEM_COUNT: int = 2000
 
 MAX_IMPORT_ITEM_COUNT: int = 10000
 
-_CN_HOSTS: list = ["rec-b.volcengineapi.com", "rec.volcengineapi.com"]
+_AIR_CN_HOSTS: list = ["byteair-api-cn1.snssdk.com"]
 
-_SG_HOSTS: list = ["rec-ap-singapore-1.byteplusapi.com"]
-
-_US_HOSTS: list = ["rec-us-east-1.byteplusapi.com"]
-
-_AIR_HOSTS: list = ["byteair-api-cn1.snssdk.com"]
-
-_SAAS_SG_HOSTS: list = ["byteair-api-sg1.recplusapi.com"]
+_AIR_SG_HOSTS: list = ["byteair-api-sg1.byteintlapi.com"]
 
 # All requests will have a XXXResponse corresponding to them,
 # and a‘ll XXXResponses will contain a 'Status' field.
