@@ -1,4 +1,4 @@
-from core.constant import _CN_HOSTS, _SG_HOSTS, _US_HOSTS, _AIR_HOSTS, _SAAS_SG_HOSTS
+from core.constant import _AIR_CN_HOSTS, _AIR_SG_HOSTS
 from core.region import Region
 
 
@@ -62,7 +62,7 @@ class Context(object):
             self.hosts = _US_HOSTS
             return
         if param.region == Region.AIR:
-            self.hosts = _AIR_HOSTS
+            self.hosts = _AIR_CN_HOSTS
             return
         if param.region == Region.SAAS_SG:
             self.hosts = _SAAS_SG_HOSTS
