@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x17volcengine_common.proto\x12\x1b\x62ytedance.volcengine.common\x1a\x19google/protobuf/any.proto\"\'\n\x06Status\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\"0\n\x04\x44\x61te\x12\x0c\n\x04year\x18\x01 \x01(\x05\x12\r\n\x05month\x18\x02 \x01(\x05\x12\x0b\n\x03\x64\x61y\x18\x03 \x01(\x05\"D\n\x0b\x44oneRequest\x12\x35\n\ndata_dates\x18\x01 \x03(\x0b\x32!.bytedance.volcengine.common.Date\"C\n\x0c\x44oneResponse\x12\x33\n\x06status\x18\x01 \x01(\x0b\x32#.bytedance.volcengine.common.Status\"\x85\x01\n\x08Metadata\x12\x0c\n\x04\x64\x61te\x18\x01 \x01(\t\x12\x13\n\x0btotal_count\x18\x02 \x01(\x03\x12\x15\n\rsuccess_count\x18\x03 \x01(\x03\x12\x15\n\rfailure_count\x18\x04 \x01(\x03\x12\x13\n\x0bsubmit_time\x18\x05 \x01(\t\x12\x13\n\x0bupdate_time\x18\x06 \x01(\t\"\x88\x01\n\tOperation\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x37\n\x08metadata\x18\x02 \x01(\x0b\x32%.bytedance.volcengine.common.Metadata\x12\x0c\n\x04\x64one\x18\x03 \x01(\x08\x12&\n\x08response\x18\x04 \x01(\x0b\x32\x14.google.protobuf.Any\"\x83\x01\n\x11OperationResponse\x12\x33\n\x06status\x18\x01 \x01(\x0b\x32#.bytedance.volcengine.common.Status\x12\x39\n\toperation\x18\x02 \x01(\x0b\x32&.bytedance.volcengine.common.Operation\"#\n\x13GetOperationRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"N\n\x15ListOperationsRequest\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\"\xa2\x01\n\x16ListOperationsResponse\x12\x33\n\x06status\x18\x01 \x01(\x0b\x32#.bytedance.volcengine.common.Status\x12:\n\noperations\x18\x02 \x03(\x0b\x32&.bytedance.volcengine.common.Operation\x12\x17\n\x0fnext_page_token\x18\x03 \x01(\t2\xe3\x02\n\x17VolcengineCommonService\x12p\n\x0cGetOperation\x12\x30.bytedance.volcengine.common.GetOperationRequest\x1a..bytedance.volcengine.common.OperationResponse\x12y\n\x0eListOperations\x12\x32.bytedance.volcengine.common.ListOperationsRequest\x1a\x33.bytedance.volcengine.common.ListOperationsResponse\x12[\n\x04\x44one\x12(.bytedance.volcengine.common.DoneRequest\x1a).bytedance.volcengine.common.DoneResponseb\x06proto3'
+  serialized_pb=b'\n\x17volcengine_common.proto\x12\x1b\x62ytedance.volcengine.common\x1a\x19google/protobuf/any.proto\"8\n\x06Status\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x0f\n\x07success\x18\x03 \x01(\x08\"0\n\x04\x44\x61te\x12\x0c\n\x04year\x18\x01 \x01(\x05\x12\r\n\x05month\x18\x02 \x01(\x05\x12\x0b\n\x03\x64\x61y\x18\x03 \x01(\x05\"D\n\x0b\x44oneRequest\x12\x35\n\ndata_dates\x18\x01 \x03(\x0b\x32!.bytedance.volcengine.common.Date\"C\n\x0c\x44oneResponse\x12\x33\n\x06status\x18\x01 \x01(\x0b\x32#.bytedance.volcengine.common.Status\"\x85\x01\n\x08Metadata\x12\x0c\n\x04\x64\x61te\x18\x01 \x01(\t\x12\x13\n\x0btotal_count\x18\x02 \x01(\x03\x12\x15\n\rsuccess_count\x18\x03 \x01(\x03\x12\x15\n\rfailure_count\x18\x04 \x01(\x03\x12\x13\n\x0bsubmit_time\x18\x05 \x01(\t\x12\x13\n\x0bupdate_time\x18\x06 \x01(\t\"\x88\x01\n\tOperation\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x37\n\x08metadata\x18\x02 \x01(\x0b\x32%.bytedance.volcengine.common.Metadata\x12\x0c\n\x04\x64one\x18\x03 \x01(\x08\x12&\n\x08response\x18\x04 \x01(\x0b\x32\x14.google.protobuf.Any\"\x83\x01\n\x11OperationResponse\x12\x33\n\x06status\x18\x01 \x01(\x0b\x32#.bytedance.volcengine.common.Status\x12\x39\n\toperation\x18\x02 \x01(\x0b\x32&.bytedance.volcengine.common.Operation\"#\n\x13GetOperationRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"N\n\x15ListOperationsRequest\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\"\xa2\x01\n\x16ListOperationsResponse\x12\x33\n\x06status\x18\x01 \x01(\x0b\x32#.bytedance.volcengine.common.Status\x12:\n\noperations\x18\x02 \x03(\x0b\x32&.bytedance.volcengine.common.Operation\x12\x17\n\x0fnext_page_token\x18\x03 \x01(\t2\xe3\x02\n\x17VolcengineCommonService\x12p\n\x0cGetOperation\x12\x30.bytedance.volcengine.common.GetOperationRequest\x1a..bytedance.volcengine.common.OperationResponse\x12y\n\x0eListOperations\x12\x32.bytedance.volcengine.common.ListOperationsRequest\x1a\x33.bytedance.volcengine.common.ListOperationsResponse\x12[\n\x04\x44one\x12(.bytedance.volcengine.common.DoneRequest\x1a).bytedance.volcengine.common.DoneResponseb\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
 
@@ -49,6 +49,13 @@ _STATUS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='success', full_name='bytedance.volcengine.common.Status.success', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -62,7 +69,7 @@ _STATUS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=83,
-  serialized_end=122,
+  serialized_end=139,
 )
 
 
@@ -107,8 +114,8 @@ _DATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=124,
-  serialized_end=172,
+  serialized_start=141,
+  serialized_end=189,
 )
 
 
@@ -139,8 +146,8 @@ _DONEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=174,
-  serialized_end=242,
+  serialized_start=191,
+  serialized_end=259,
 )
 
 
@@ -171,8 +178,8 @@ _DONERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=244,
-  serialized_end=311,
+  serialized_start=261,
+  serialized_end=328,
 )
 
 
@@ -238,8 +245,8 @@ _METADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=314,
-  serialized_end=447,
+  serialized_start=331,
+  serialized_end=464,
 )
 
 
@@ -291,8 +298,8 @@ _OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=450,
-  serialized_end=586,
+  serialized_start=467,
+  serialized_end=603,
 )
 
 
@@ -330,8 +337,8 @@ _OPERATIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=589,
-  serialized_end=720,
+  serialized_start=606,
+  serialized_end=737,
 )
 
 
@@ -362,8 +369,8 @@ _GETOPERATIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=722,
-  serialized_end=757,
+  serialized_start=739,
+  serialized_end=774,
 )
 
 
@@ -408,8 +415,8 @@ _LISTOPERATIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=759,
-  serialized_end=837,
+  serialized_start=776,
+  serialized_end=854,
 )
 
 
@@ -454,8 +461,8 @@ _LISTOPERATIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=840,
-  serialized_end=1002,
+  serialized_start=857,
+  serialized_end=1019,
 )
 
 _DONEREQUEST.fields_by_name['data_dates'].message_type = _DATE
@@ -557,8 +564,8 @@ _VOLCENGINECOMMONSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1005,
-  serialized_end=1360,
+  serialized_start=1022,
+  serialized_end=1377,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetOperation',

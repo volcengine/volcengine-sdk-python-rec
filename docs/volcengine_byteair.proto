@@ -12,6 +12,9 @@ message DataError {
   // Output only.
   // The failed data,that is serialized by json.
   string data = 2;
+
+ // success mark
+  bool success = 3;
 }
 
 message WriteResponse {
@@ -405,6 +408,9 @@ message PredictResponse {
   // Output only.
   // This is same as the request id of request.
   string request_id = 4;
+
+   // success mark
+  bool success = 5;
 }
 
 message PredictResult{
