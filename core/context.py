@@ -67,8 +67,4 @@ class VolcAuthConf(object):
         self.region: str = self._parse_region(param)
 
     def _parse_region(self, param: Param):
-        if param.region == Region.SG:
-            return "ap-singapore-1"
-        if param.region == Region.US:
-            return "us-east-1"
         return "cn-north-1"
