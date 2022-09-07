@@ -14,3 +14,4 @@ from .metrics_helper import (
     report_request_error,
     report_request_exception
 )
+from .metrics import *
