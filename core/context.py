@@ -52,20 +52,11 @@ class Context(object):
         if len(param.hosts) > 0:
             self.hosts = param.hosts
             return
-        if param.region == Region.CN:
-            self.hosts = _CN_HOSTS
-            return
-        if param.region == Region.SG:
-            self.hosts = _SG_HOSTS
-            return
-        if param.region == Region.US:
-            self.hosts = _US_HOSTS
-            return
         if param.region == Region.AIR:
             self.hosts = _AIR_CN_HOSTS
             return
-        if param.region == Region.SAAS_SG:
-            self.hosts = _SAAS_SG_HOSTS
+        if param.region == Region.AIR_SG:
+            self.hosts = _AIR_SG_HOSTS
             return
 
 
