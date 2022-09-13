@@ -13,7 +13,7 @@ message DataError {
   // The failed data,that is serialized by json.
   string data = 2;
 
- // success mark
+  // success mark
   bool success = 3;
 }
 
@@ -409,7 +409,7 @@ message PredictResponse {
   // This is same as the request id of request.
   string request_id = 4;
 
-   // success mark
+  // success mark
   bool success = 5;
 }
 
@@ -521,6 +521,9 @@ message CallbackResponse {
   // Output only.
   // Detailed error message.
   string message = 2;
+
+  // success mark
+  bool success = 3;
 }
 
 // The Volcengine General service.

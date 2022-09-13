@@ -52,20 +52,11 @@ class Context(object):
         if len(param.hosts) > 0:
             self.hosts = param.hosts
             return
-        if param.region == Region.CN:
-            self.hosts = _CN_HOSTS
-            return
-        if param.region == Region.SG:
-            self.hosts = _SG_HOSTS
-            return
-        if param.region == Region.US:
-            self.hosts = _US_HOSTS
-            return
         if param.region == Region.AIR:
             self.hosts = _AIR_CN_HOSTS
             return
-        if param.region == Region.SAAS_SG:
-            self.hosts = _SAAS_SG_HOSTS
+        if param.region == Region.AIR_SG:
+            self.hosts = _AIR_SG_HOSTS
             return
 
 
@@ -76,8 +67,4 @@ class VolcAuthConf(object):
         self.region: str = self._parse_region(param)
 
     def _parse_region(self, param: Param):
-        if param.region == Region.SG:
-            return "ap-singapore-1"
-        if param.region == Region.US:
-            return "us-east-1"
         return "cn-north-1"
