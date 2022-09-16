@@ -52,7 +52,7 @@ class Context(object):
         if len(param.hosts) > 0:
             self.hosts = param.hosts
             return
-        if param.region == Region.AIR:
+        if param.region == Region.AIR_CN:
             self.hosts = _AIR_CN_HOSTS
             return
         if param.region == Region.AIR_SG:
