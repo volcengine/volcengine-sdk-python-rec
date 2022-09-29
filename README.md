@@ -19,7 +19,7 @@ SK = "xxx"
 
 client: Client = ClientBuilder() \
     .tenant_id(TENANT_ID) \
-    .application_id(PROJECT_ID) \
+    .application_id(APPLICATION_ID) \
     .ak(AK) \
     .sk(SK) \
     .region(Region.AIR_CN) \
