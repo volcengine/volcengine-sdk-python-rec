@@ -4,7 +4,7 @@ from core.region import Region
 
 class Param(object):
     def __init__(self):
-        self.tenant: str = ""
+        self.application_id: str = ""
         self.tenant_id: str = ""
         self.token: str = ""
         self.retry_times: int = 0
@@ -20,7 +20,7 @@ class Param(object):
 class Context(object):
     def __init__(self, param: Param):
         self._check_required_field(param)
-        self.tenant: str = param.tenant
+        self.tenant: str = param.application_id
         self.tenant_id: str = param.tenant_id
         self.token: str = param.token
         self.customer_headers: dict = param.headers
@@ -32,8 +32,8 @@ class Context(object):
 
     @staticmethod
     def _check_required_field(param: Param) -> None:
-        if len(param.tenant) == 0:
-            raise Exception("Tenant is empty")
+        if len(param.application_id) == 0:
+            raise Exception("Application id is empty")
         if len(param.tenant_id) == 0:
             raise Exception("Tenant id is emtpy")
         if param.region == Region.UNKNOWN:

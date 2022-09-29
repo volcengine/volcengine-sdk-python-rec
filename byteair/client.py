@@ -71,8 +71,8 @@ class ClientBuilder(object):
         self._param.tenant_id = tenant_id
         return self
 
-    def project_id(self, project_id: str):
-        self._param.tenant = project_id
+    def application_id(self, application_id: str):
+        self._param.application_id = application_id
         return self
 
     def token(self, token: str):

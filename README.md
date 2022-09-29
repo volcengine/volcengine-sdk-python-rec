@@ -10,8 +10,8 @@ from core import Region, Option, NetException, BizException, metrics
 
 # 必传,租户id.
 TENANT_ID = "xxx"
-# 必传,项目id.
-PROJECT_ID = "xxx"
+# 必传,应用id.
+APPLICATION_ID = "xxx"
 # 必传,密钥AK,获取方式:【火山引擎控制台】->【个人信息】->【密钥管理】中获取.
 AK = "xxx"
 # 必传,密钥SK,获取方式：【火山引擎控制台】->【个人信息】->【密钥管理】中获取.
@@ -19,7 +19,7 @@ SK = "xxx"
 
 client: Client = ClientBuilder() \
     .tenant_id(TENANT_ID) \
-    .project_id(PROJECT_ID) \
+    .application_id(PROJECT_ID) \
     .ak(AK) \
     .sk(SK) \
     .region(Region.AIR_CN) \
@@ -27,16 +27,6 @@ client: Client = ClientBuilder() \
 # metrics上报初始化.建议开启,方便火山侧排查问题.
 metrics.init(())
 
-
-client: Client = ClientBuilder() \
-    .tenant_id("1") \
-    .project_id("10001369") \
-    .token("fb541d45237fdd44b00255ba2ea77e48") \
-    .use_air_auth() \
-    .region(Region.AIR_CN) \
-    .schema("http") \
-    .hosts(["10.74.239.22:80","10.74.239.38:80","10.74.239.37:80"]) \
-    .build()
 
 def write():
     # 此处为测试数据，实际调用时需注意字段类型和格式
