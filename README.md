@@ -19,7 +19,7 @@ SK = "xxx"
 
 client: Client = ClientBuilder() \
     .tenant_id(TENANT_ID) \
-    .application_id(PROJECT_ID) \
+    .application_id(APPLICATION_ID) \
     .ak(AK) \
     .sk(SK) \
     .region(Region.AIR_CN) \
@@ -101,6 +101,17 @@ def predict():
     context = predict_request.context
     context.spm = "1$##$2$##$3$##$4"
     context.extra["extra_key"] = "extra_value"
+    
+    feature = context.feature
+    feature.stringFeature["key"] = "value1"
+    feature.stringFeature["key"] = "value2"
+    feature.stringArrayFeature["array_key"].values.append("array_value1")
+    feature.stringArrayFeature["array_key"].values.append("array_value2")
+    filter = context.filter
+    filter.stringFilter["key"] = "value"
+    filter.stringArrayFilter["array_key"].values.append("array_value1")
+    filter.stringArrayFilter["array_key"].values.append("array_value2")
+    
     candidate_item1 = predict_request.candidateItems.add()
     candidate_item1.id = "item_id1"
     candidate_item2 = predict_request.candidateItems.add()
