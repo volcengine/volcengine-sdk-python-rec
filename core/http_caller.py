@@ -165,7 +165,7 @@ class HttpCaller(object):
                 timeout_secs = timeout.total_seconds()
                 rsp: Response = requests.post(url=url, headers=headers, data=req_bytes, timeout=timeout_secs, auth=auth)
             else:
-                rsp: Response = requests.post(url=url, headers=headers, data=req_bytes, auth=auth)
+                rsp: Response = requests.post(url=url, headers=headers, data=req_bytes, timeout=1, auth=auth)
         except BaseException as e:
             report_request_exception(METRICS_KEY_INVOKE_ERROR, url, start * 1000, e)
             if self._is_timeout_exception(e):
