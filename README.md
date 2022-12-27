@@ -2,7 +2,7 @@ volcengine data/predict api sdk, python version
 <br>
 ```python
 import uuid
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from byteair import ClientBuilder, Client
 from byteair.protocol.volcengine_byteair_pb2 import *
@@ -57,6 +57,7 @@ def write():
         Option.with_stage("pre_sync"),
         # 必传，数据产生日期，实际传输时需修改为实际日期
         Option.with_data_date(datetime(year=2022, month=1, day=1)),
+        Option.with_timeout(timedelta(milliseconds=1000)),
         Option.with_request_id(str(uuid.uuid1())),
     )
     try:
@@ -79,6 +80,7 @@ def done():
         # 预同步("pre_sync"), 历史数据同步("history_sync"), 增量天级同步("incremental_sync_daily"),
         # 增量实时同步("incremental_sync_streaming")
         Option.with_stage("pre_sync"),
+        Option.with_timeout(timedelta(milliseconds=1000)),
         Option.with_request_id(str(uuid.uuid1())),
     )
     try:
@@ -119,6 +121,7 @@ def predict():
     opts = (
         Option.with_request_id(str(uuid.uuid1())),
         Option.with_scene("default"),
+        Option.with_timeout(timedelta(milliseconds=1000)),
         Option.with_headers({"Enable-Spm-Route": "true"})
     )
     try:
@@ -156,6 +159,7 @@ def callback():
     callback_request.context = callback_context
     opts = (
         Option.with_request_id(str(uuid.uuid1())),
+        Option.with_timeout(timedelta(milliseconds=1000)),
     )
     try:
         rsp = client.callback(callback_request, *opts)
