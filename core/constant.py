@@ -2,7 +2,7 @@ MAX_WRITE_ITEM_COUNT: int = 2000
 
 MAX_IMPORT_ITEM_COUNT: int = 10000
 
-_AIR_CN_HOSTS: list = ["byteair-api-cn1.snssdk.com"]
+_AIR_CN_HOSTS: list = ["api.byteair.volces.com"]
 
 _AIR_SG_HOSTS: list = ["byteair-api-sg1.byteintlapi.com"]
 
