@@ -1,4 +1,13 @@
-# [](https://code.byted.org/byteair/volcengine-sdk-python-rec/compare/v1.2.0...v) (2022-12-27)
+# [](https://code.byted.org/byteair/volcengine-sdk-python-rec/compare/v1.2.1...v) (2023-01-04)
+
+
+
+## [1.2.1](https://code.byted.org/byteair/volcengine-sdk-python-rec/compare/v1.2.0...v1.2.1) (2023-01-04)
+
+
+### Features
+
+* change default cn domain ([77e3537](https://code.byted.org/byteair/volcengine-sdk-python-rec/commits/77e3537afd4c20df663df676ea5ad5e4a1066c6d))
 
 
 
