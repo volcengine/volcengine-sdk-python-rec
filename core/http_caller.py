@@ -67,6 +67,7 @@ class HttpCaller(object):
         req_bytes: bytes = gzip.compress(req_bytes)
         headers: dict = self._build_headers(options, contextType)
         url = self._build_url_with_queries(options, url)
+        log.debug("[VolcengineSDK]request url: %s", url)
         auth_func = self._build_auth(req_bytes)
         rsp_bytes = self._do_http_request(url, headers, req_bytes, options.timeout, auth_func)
         if rsp_bytes is not None:
