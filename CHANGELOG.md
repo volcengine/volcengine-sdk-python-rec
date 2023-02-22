@@ -1,8 +1,9 @@
-# [](https://code.byted.org/byteair/volcengine-sdk-python-rec/compare/v1.2.1...v) (2023-01-29)
+# [](https://code.byted.org/byteair/volcengine-sdk-python-rec/compare/v1.2.1...v) (2023-02-22)
 
 
 ### Features
 
+* add more metrics tag ([fa341c5](https://code.byted.org/byteair/volcengine-sdk-python-rec/commits/fa341c55a1fd47956dbcab97fc5b81c0663f1ec6))
 * remove host avaliabler, use random lb strategy when .hosts() set several hosts ([f6b2f28](https://code.byted.org/byteair/volcengine-sdk-python-rec/commits/f6b2f286d66b47379c8e090b00292256f0452234))
 
 
