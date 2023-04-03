@@ -1,4 +1,8 @@
-# [](https://code.byted.org/byteair/volcengine-sdk-python-rec/compare/v1.2.1...v) (2023-02-22)
+# [](https://code.byted.org/byteair/volcengine-sdk-python-rec/compare/v1.3.0...v) (2023-04-03)
+
+
+
+# [1.3.0](https://code.byted.org/byteair/volcengine-sdk-python-rec/compare/v1.2.1...v1.3.0) (2023-02-22)
 
 
 ### Features
