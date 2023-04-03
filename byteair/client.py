@@ -1,4 +1,5 @@
 import logging
+from random import choice
 from optparse import Option
 
 from byteair.url import _GeneralURL
@@ -25,14 +26,14 @@ class Client(CommonClient):
         super().__init__(param)
         self._general_url: _GeneralURL = _GeneralURL(self._context)
 
-    def do_refresh(self, host: str):
-        self._general_url.refresh(host)
+    def do_refresh(self, hosts: list):
+        self._general_url.refresh(hosts)
 
     def write_data(self, data_list: list, topic: str, *opts: Option) -> WriteResponse:
         if len(data_list) > MAX_IMPORT_ITEM_COUNT:
             raise BizException(_ERR_MSG_TOO_MANY_ITEMS)
 
-        url_format: str = self._general_url.write_data_url_format
+        url_format: str = choice(self._general_url.write_data_url_format)
         url: str = url_format.replace("#", topic)
         response: WriteResponse = WriteResponse()
         self._http_caller.do_json_request(url, data_list, response, *opts)
@@ -40,7 +41,7 @@ class Client(CommonClient):
         return response
 
     def predict(self, request: PredictRequest, *opts: CoreOption) -> PredictResponse:
-        url_format: str = self._general_url.predict_url_format
+        url_format: str = choice(self._general_url.predict_url_format)
         options: Options = CoreOption.conv_to_options(opts)
         scene: str = _DEFAULT_PREDICT_SCENE
         if options.scene:
@@ -52,7 +53,7 @@ class Client(CommonClient):
         return response
 
     def callback(self, request: CallbackRequest, *opts: CoreOption) -> CallbackResponse:
-        url: str = self._general_url.callback_url
+        url: str = choice(self._general_url.callback_url)
         options: Options = CoreOption.conv_to_options(opts)
         if not options.scene:
             options.scene = _DEFAULT_CALLBACK_SCENE
