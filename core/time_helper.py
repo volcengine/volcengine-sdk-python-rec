@@ -1,8 +1,4 @@
-from datetime import timedelta, datetime, timezone, tzinfo
-
-
-def rfc3339_format(dt: datetime) -> str:
-    return dt.astimezone().isoformat()
+from datetime import timedelta
 
 
 def milliseconds(delta: timedelta) -> int:
