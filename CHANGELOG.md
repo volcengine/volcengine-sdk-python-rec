@@ -1,4 +1,13 @@
-# [](/byteair/volcengine-sdk-python-rec/compare/v1.3.0...v) (2023-05-30)
+# [](/byteair/volcengine-sdk-python-rec/compare/v1.3.1...v) (2023-12-11)
+
+
+
+## [1.3.1](/byteair/volcengine-sdk-python-rec/compare/v1.3.0...v1.3.1) (2023-12-11)
+
+
+### Features
+
+* content-Date timezone bug fix ([1fd6c7c](/byteair/volcengine-sdk-python-rec/commits/1fd6c7cd36d9e543f749c229a4a109bd49278ff7))
 
 
 
