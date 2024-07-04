@@ -2,14 +2,9 @@ MAX_WRITE_ITEM_COUNT: int = 2000
 
 MAX_IMPORT_ITEM_COUNT: int = 10000
 
-_AIR_CN_HOSTS: list = ["api.byteair.volces.com"]
-
-_AIR_SG_HOSTS: list = ["byteair-api-sg1.byteintlapi.com"]
-
 # All requests will have a XXXResponse corresponding to them,
-# and a‘ll XXXResponses will contain a 'Status' field.
+# and all XXXResponses will contain a 'Status' field.
 # The status of this request can be determined by the value of `Status.Code`
-# Detail error code info：https://docs.byteplus.com/docs/error-code
 
 # The request was executed successfully without any exception
 STATUS_CODE_SUCCESS: int = 0
