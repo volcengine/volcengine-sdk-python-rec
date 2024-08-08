@@ -2,11 +2,9 @@ from core.context import Context
 from core.url_center import URLCenter
 
 # The URL format of operation information
-# Example: https://tob.sgsnssdk.com/data/api/retail/retail_demo/operation?method=get
 _OPERATION_URL_FORMAT = "{}://{}/data/api/{}/operation?method={}"
 
 # The URL format of done information
-# Example: https://tob.sgsnssdk.com/data/api/retail/retail_demo/done?topic=user
 _DONE_URL_FORMAT = "{}://{}/data/api/{}/done?topic=#"
 
 

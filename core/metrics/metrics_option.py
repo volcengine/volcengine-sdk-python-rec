@@ -4,8 +4,8 @@ from .constant import *
 
 class MetricsCfg(object):
     def __init__(self):
+        self.domain = ""
         self.enable_metrics: bool = True
-        self.domain: str = DEFAULT_METRICS_DOMAIN
         self.prefix: str = DEFAULT_METRICS_PREFIX
         self.http_schema: str = DEFAULT_HTTP_SCHEMA
         self.flush_interval_ms = DEFAULT_FLUSH_INTERVAL_MS

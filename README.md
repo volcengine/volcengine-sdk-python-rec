@@ -6,26 +6,28 @@ from datetime import datetime, timedelta
 
 from byteair import ClientBuilder, Client
 from byteair.protocol.volcengine_byteair_pb2 import *
-from core import Region, Option, NetException, BizException, metrics
+from core import Option, NetException, BizException, metrics, MetricsOption
 
 # 必传,租户id.
 TENANT_ID = "xxx"
 # 必传,应用id.
 APPLICATION_ID = "xxx"
-# 必传,密钥AK,获取方式:【火山引擎控制台】->【个人信息】->【密钥管理】中获取.
+# 必传,密钥AK.
 AK = "xxx"
-# 必传,密钥SK,获取方式：【火山引擎控制台】->【个人信息】->【密钥管理】中获取.
+# 必传,密钥SK.
 SK = "xxx"
+# 必传,域名.
+HOST = "xxx"
 
 client: Client = ClientBuilder() \
     .tenant_id(TENANT_ID) \
     .application_id(APPLICATION_ID) \
     .ak(AK) \
     .sk(SK) \
-    .region(Region.AIR_CN) \
+    .hosts([HOST]) \
     .build()
 # metrics上报初始化.建议开启,方便火山侧排查问题.
-metrics.init(())
+metrics.init((MetricsOption.with_metrics_domain(HOST),))
 
 
 def write():

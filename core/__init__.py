@@ -1,5 +1,4 @@
 from .option import Option
-from .region import Region
 from .exception import BizException, NetException
 from .constant import (
     MAX_IMPORT_ITEM_COUNT,

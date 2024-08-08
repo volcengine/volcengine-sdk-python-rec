@@ -7,7 +7,6 @@ from byteair.protocol.volcengine_byteair_pb2 import *
 from common.client import CommonClient
 from core import BizException
 from core import MAX_IMPORT_ITEM_COUNT
-from core import Region
 from core.context import Param
 from core.option import Option as CoreOption
 from core.options import Options
@@ -90,10 +89,6 @@ class ClientBuilder(object):
 
     def headers(self, headers: dict):
         self._param.headers = headers
-        return self
-
-    def region(self, region: Region):
-        self._param.region = region
         return self
 
     def ak(self, ak: str):

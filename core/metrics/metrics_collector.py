@@ -98,10 +98,15 @@ class MetricValue(object):
 
 # As long as the init function is called, the metrics are enabled
 def init(metrics_opts: tuple):
-    global metrics_cfg
-    metrics_cfg = MetricsCfg()
+    tmpCfg = MetricsCfg()
     for opt in metrics_opts:
-        opt.fill(metrics_cfg)
+        opt.fill(tmpCfg)
+    if tmpCfg.domain == '':
+        log.error("metrics domain is empty")
+        return
+
+    global metrics_cfg
+    metrics_cfg = tmpCfg
 
     metrics_collector[MetricsType.metrics_type_store] = {}
     metrics_collector[MetricsType.metrics_type_counter] = {}
