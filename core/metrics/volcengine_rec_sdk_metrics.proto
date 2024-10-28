@@ -1,5 +1,5 @@
 syntax = "proto3";
-package metric;
+package volcengine.recommend.metrics;
 
 message Metric {
   string metric = 1;
