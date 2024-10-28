@@ -1,15 +1,12 @@
-import threading
-
-from .metrics_option import *
-from .constant import *
-from .helper import _build_collect_key, _parse_name_and_tags, _is_timeout_exception
-from .sample import *
-from .metrics_pb2 import *
-import requests
-import time
 import logging
 import sys
-from core.exception import NetException, BizException
+import time
+import requests
+from .volcengine_rec_sdk_metrics_pb2 import *
+from core.exception import BizException
+from .helper import _build_collect_key, _parse_name_and_tags, _is_timeout_exception
+from .metrics_option import *
+from .sample import *
 
 log = logging.getLogger(__name__)
 
